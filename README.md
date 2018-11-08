@@ -4,7 +4,7 @@ Dynamo application
 Major Requirements:
 :   -   Python3.5
 
-API docs can be found at: [docs](<POSTMAN%20API%20DOC%20LINK%20HERE>)
+API docs can be found at: [docs](<https://documenter.getpostman.com/view/3592529/RzZ7ofvD>)
 ---------------------------------------------------------------------
 
 First, create a virtual environment and install requirements (Make sure

@@ -1,56 +1,51 @@
 Dynamo application
-====================
+==================
 
 Major Requirements:
- - Python3.5
+:   -   Python3.5
 
+API docs can be found at: [docs](<POSTMAN%20API%20DOC%20LINK%20HERE>)
+---------------------------------------------------------------------
 
-API docs can be found at: docs_
---------------------------------
+First, create a virtual environment and install requirements (Make sure
+you've installed python3.5):
 
-.. _docs:  <POSTMAN API DOC LINK HERE>
+``` {.sourceCode .bash}
+virtualenv -p python3.5 ~/.virtualenvs/dynamo
+source ~/.virtualenvs/dynamo/bin/activate
+cd dynamo
+pip install -r requirements.txt
+```
 
-
-First, create a virtual environment and install requirements (Make sure you've installed python3.5):
-
-.. code-block:: bash
-
-    virtualenv -p python3.5 ~/.virtualenvs/dynamo
-    source ~/.virtualenvs/dynamo/bin/activate
-    cd dynamo
-    pip install -r requirements.txt
-
-
-Now put the user-name and pasword to `settings.py` file in `DATABASES` configurations.
+Now put the user-name and pasword to settings.py file in DATABASES
+configurations.
 
 Run migrations:
 
-.. code-block:: bash
+``` {.sourceCode .bash}
+python manage.py migrate
+```
 
-    python manage.py migrate
+Create a superuser to access Django Administration Console (i.e.
+/admin):
 
-
-Create a superuser to access Django Administration Console (i.e. /admin):
-
-.. code-block:: bash
-
-    python manage.py create_admin # This will also print superuser credentials.
-
+``` {.sourceCode .bash}
+python manage.py create_admin # This will also print superuser credentials.
+```
 
 Finally, run development server as follow:
 
-.. code-block:: bash
+``` {.sourceCode .bash}
+python manage.py runserver 0.0.0.0:8000
+```
 
-    python manage.py runserver 0.0.0.0:8000
-
-
-Now, you will be able to visit Juntos @ http://localhost:8000 and Django Admin @ http://localhost:8000/admin/
-
+Now, you will be able to visit Juntos @ <http://localhost:8000> and
+Django Admin @ <http://localhost:8000/admin/>
 
 To clean environment following commands can be used:
 
-.. code-block:: bash
-
-    deactivate
-    rm -rf ~/.virtualenvs/dynamo
-    find . -name "*.pyc" -exec rm -f {} ;
+``` {.sourceCode .bash}
+deactivate
+rm -rf ~/.virtualenvs/dynamo
+find . -name "*.pyc" -exec rm -f {} ;
+```

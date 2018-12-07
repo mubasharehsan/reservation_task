@@ -39,7 +39,7 @@ Finally, run development server as follow:
 python manage.py runserver 0.0.0.0:8000
 ```
 
-Now, you will be able to visit Juntos @ <http://localhost:8000> and
+Now, you will be able to visit dynamo @ <http://localhost:8000> and
 Django Admin @ <http://localhost:8000/admin/>
 
 To clean environment following commands can be used:
